@@ -1,0 +1,6 @@
+there are 3 points in the graph
+calculate the distance between them
+and check weather the points can form a right angle triangle, isoscalus triangle and right angle isoscalus triangle
+give me 4 different co-ordinates for each points
+so that i can check all the test cases
+use a for loop and print all the test cases with proper naming convention
