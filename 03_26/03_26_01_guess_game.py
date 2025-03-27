@@ -102,14 +102,14 @@ print("")
 print("-" * 80)
 
 if (points>15 and (guess_count_1 ==9 and guess_count_2==0)):
-    print("O-outstanding")
+    print("🗱 O-outstanding")
 elif(points>=15 and (guess_count_1 >=6 and guess_count_2<=3)):
-    print("A-Very good")
+    print("🗲 A-Very good")
 elif(points>=12 and (guess_count_1 >=4 and guess_count_2<=5)):
-    print("B-good")
+    print("😇 B-good")
 elif(points>=8 and (guess_count_1 >=2 and guess_count_2<=7)):
-    print("c-Average")
+    print("😥 c-Average")
 else:
-    print("please improve your vocabulaby")
+    print("🙄 please improve your vocabulaby")
 
 print("-" * 80)
