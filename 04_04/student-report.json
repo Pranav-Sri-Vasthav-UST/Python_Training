@@ -1,0 +1,123 @@
+[
+    {
+        "name": "Ankita",
+        "age": 14,
+        "regid": "CAP007",
+        "phy": 99,
+        "chem": 99,
+        "math": 99,
+        "bio": 99,
+        "avg": 99.0,
+        "rank": 1
+    },
+    {
+        "name": "Ankita",
+        "age": 14,
+        "regid": "INF007",
+        "phy": 99,
+        "chem": 99,
+        "math": 99,
+        "bio": 99,
+        "avg": 99.0,
+        "rank": 2
+    },
+    {
+        "name": "Vijay",
+        "age": 14,
+        "regid": "HPE001",
+        "phy": 99,
+        "chem": 98,
+        "math": 97,
+        "bio": 96,
+        "avg": 97.5,
+        "rank": 3
+    },
+    {
+        "name": "Muni",
+        "age": 14,
+        "regid": "HPE003",
+        "phy": 97,
+        "chem": 98,
+        "math": 97,
+        "bio": 94,
+        "avg": 96.5,
+        "rank": 4
+    },
+    {
+        "name": "Grace",
+        "age": 14,
+        "regid": "HPE006",
+        "phy": 94,
+        "chem": 95,
+        "math": 96,
+        "bio": 97,
+        "avg": 95.5,
+        "rank": 5
+    },
+    {
+        "name": "Grace",
+        "age": 14,
+        "regid": "ORA006",
+        "phy": 94,
+        "chem": 95,
+        "math": 96,
+        "bio": 97,
+        "avg": 95.5,
+        "rank": 6
+    },
+    {
+        "name": "Abhi",
+        "age": 14,
+        "regid": "HPE004",
+        "phy": 96,
+        "chem": 93,
+        "math": 97,
+        "bio": 95,
+        "avg": 95.25,
+        "rank": 7
+    },
+    {
+        "name": "John",
+        "age": 14,
+        "regid": "HPE008",
+        "phy": 96,
+        "chem": 93,
+        "math": 97,
+        "bio": 95,
+        "avg": 95.25,
+        "rank": 8
+    },
+    {
+        "name": "Aryan",
+        "age": 14,
+        "regid": "HPE002",
+        "phy": 98,
+        "chem": 91,
+        "math": 93,
+        "bio": 96,
+        "avg": 94.5,
+        "rank": 9
+    },
+    {
+        "name": "Hemanth",
+        "age": 14,
+        "regid": "HPE005",
+        "phy": 94,
+        "chem": 91,
+        "math": 93,
+        "bio": 96,
+        "avg": 93.5,
+        "rank": 10
+    },
+    {
+        "name": "Chris",
+        "age": 14,
+        "regid": "HPE009",
+        "phy": 94,
+        "chem": 91,
+        "math": 93,
+        "bio": 96,
+        "avg": 93.5,
+        "rank": 11
+    }
+]
