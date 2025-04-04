@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Alice",
+        "age": 30,
+        "gender": "Female",
+        "emp_id": "E101",
+        "department": "HR",
+        "salary": 48000,
+        "join_date": "2025-04-04"
+    },
+    {
+        "name": "Bob",
+        "age": 28,
+        "gender": "Male",
+        "emp_id": "E102",
+        "department": "IT",
+        "salary": 55000,
+        "join_date": "2025-04-04"
+    },
+    {
+        "name": "Charlie",
+        "age": 35,
+        "gender": "Male",
+        "emp_id": "E103",
+        "department": "HR",
+        "salary": 60000,
+        "join_date": "2025-04-04"
+    },
+    {
+        "name": "Diana",
+        "age": 26,
+        "gender": "Female",
+        "emp_id": "E104",
+        "department": "IT",
+        "salary": 47000,
+        "join_date": "2025-04-04"
+    },
+    {
+        "name": "Evan",
+        "age": 40,
+        "gender": "Male",
+        "emp_id": "E105",
+        "department": "Finance",
+        "salary": 53000,
+        "join_date": "2025-04-04"
+    }
+]
