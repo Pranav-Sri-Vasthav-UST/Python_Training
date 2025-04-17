@@ -1,0 +1,51 @@
+<!-- convertapp/templates/convertapp/timer.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timer</title>
+    <script>
+        function startTimerAndSubmit() {
+            let minutes = parseInt(document.getElementById("minutes").value) || 0;
+            let seconds = parseInt(document.getElementById("seconds").value) || 0;
+            let totalSeconds = (minutes * 60) + seconds;
+
+            // Submit form with hidden input
+            document.getElementById("durationInput").value = totalSeconds;
+            document.getElementById("timerForm").submit();
+
+            // Start countdown
+            const display = document.getElementById("timerDisplay");
+            const interval = setInterval(() => {
+                if (totalSeconds <= 0) {
+                    clearInterval(interval);
+                    display.innerHTML = "⏰ Time's up!";
+                    return;
+                }
+                totalSeconds--;
+
+                let mins = Math.floor(totalSeconds / 60);
+                let secs = totalSeconds % 60;
+
+                display.innerHTML = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+    <h1>⏳ Timer</h1>
+
+    <form method="POST" id="timerForm">
+        {% csrf_token %}
+        <label>Minutes: <input type="number" id="minutes" name="minutes" min="0"></label>
+        <label>Seconds: <input type="number" id="seconds" name="seconds" min="0"></label>
+        <input type="hidden" id="durationInput" name="duration">
+        <button type="button" onclick="startTimerAndSubmit()">Start Timer</button>
+    </form>
+
+    <h2 id="timerDisplay">00:00</h2>
+
+    {% if saved %}
+        <p style="color: green;">✅ Timer of {{ duration }} seconds saved successfully!</p>
+    {% endif %}
+</body>
+</html>
