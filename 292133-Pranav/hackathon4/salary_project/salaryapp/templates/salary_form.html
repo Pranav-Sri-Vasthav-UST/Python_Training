@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Salary Calculator</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+
+    h2 {
+      color: #00ffff;
+    }
+
+    form {
+      background: #1a1a1a;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00ffff50;
+      width: 320px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #e0e0e0;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      background: #2a2a2a;
+      border: none;
+      border-bottom: 2px solid #00ffff;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #00ffff;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    a {
+      color: #ff00ff;
+      margin-top: 15px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>Employee Salary Calculator</h2>
+  <form method="POST" action="{% url 'salary_result' %}">
+    {% csrf_token %}
+    <label>Name:</label><input type="text" name="name" required>
+    <label>Age:</label><input type="number" name="age" required>
+    <label>Company:</label><input type="text" name="company" required>
+    <label>Gross Salary:</label><input type="number" name="gross_salary" required>
+    <label>Tax (%):</label><input type="number" name="tax" required>
+    <label>Bonus (%):</label><input type="number" name="bonus" required>
+    <button type="submit">Calculate</button>
+  </form>
+  <a href="{% url 'jumble_word' %}">🔀 Try Jumble Word</a>
+</body>
+</html>

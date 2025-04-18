@@ -1,0 +1,53 @@
+I am developing a django application
+in which i mainly do 2 tasks with 3 pages
+task 1 is i calculate the net salary
+    in which i use 2 pages
+        -> salary_form.html
+        -> salary_result.html
+task 2 is i will jumble the given word
+    in which i use only one page
+        -> jumble_word.html
+
+Now i have developed the files and the logic i need proper template and theme to show case that
+can you modify the given html files and add css not js and convert it into a neo-noir theme page
+
+-> salary_form.html :
+-------------------------------------------------------------------------------------------------
+<h2>Employee Salary Calculator</h2>
+<form method="POST" action="{% url 'salary_result' %}">
+  {% csrf_token %}
+  <label>Name:</label><input type="text" name="name" required><br>
+  <label>Age:</label><input type="number" name="age" required><br>
+  <label>Company:</label><input type="text" name="company" required><br>
+  <label>Gross Salary:</label><input type="number" name="gross_salary" required><br>
+  <label>Tax (%):</label><input type="number" name="tax" required><br>
+  <label>Bonus (%):</label><input type="number" name="bonus" required><br>
+  <button type="submit">Calculate</button>
+</form>
+<a href="{% url 'jumble_word' %}">Go to Jumble Word</a>
+-------------------------------------------------------------------------------------------------
+
+-> salary_result.html :
+-------------------------------------------------------------------------------------------------
+<h2>Salary Result</h2>
+<p><strong>{{ name }}</strong>, your Net Salary is: ₹{{ net_salary }}</p>
+<a href="{% url 'salary_form' %}">Back to Form</a>
+-------------------------------------------------------------------------------------------------
+
+-> jumble_word.html :
+-------------------------------------------------------------------------------------------------
+<h2>Jumble a Word</h2>
+<form method="POST">
+  {% csrf_token %}
+  <label>Enter a word:</label>
+  <input type="text" name="word" required>
+  <button type="submit">Jumble</button>
+</form>
+
+{% if jumbled %}
+  <p>Original Word: <strong>{{ original }}</strong></p>
+  <p>Jumbled Word: <strong>{{ jumbled }}</strong></p>
+{% endif %}
+
+<a href="{% url 'salary_form' %}">Back to Salary Calculator</a>
+-------------------------------------------------------------------------------------------------
